@@ -1,0 +1,11 @@
+/* pages/view/view.wxss */
+.hover-box1 {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  font-size: 30px;
+}
+.hover-box2 {
+  font-size: 30px;
+  background-color: pink;
+}

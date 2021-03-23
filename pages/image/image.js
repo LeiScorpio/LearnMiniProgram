@@ -1,12 +1,30 @@
-// pages/about/about.js
+// pages/image/image.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    imagePath: ''
 
   },
+  selectImg() {
+    // 调用系统API，让用户在相册中选择图片或者拍照
+    wx.chooseImage({
+      success: (res) => {
+        const path = res.tempFilePaths[0]
+        // 存储图片地址
+        this.setData({
+          imagePath: path
+        })
+
+      }
+    })
+  },
+  imageLoad() {
+    console.log('图片加载了');
+  },
+
 
   /**
    * 生命周期函数--监听页面加载

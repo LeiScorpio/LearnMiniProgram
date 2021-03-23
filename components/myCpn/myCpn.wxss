@@ -1,0 +1,9 @@
+/* components/myCpn/myCpn.wxss */
+.title {
+  font-size: 40rpx;
+  font-weight: 700;
+}
+.content {
+  font-size: 30rpx ;
+}
+/* 组件内部不要使用id选择器、属性选择器、尽量都使用类选择器 */

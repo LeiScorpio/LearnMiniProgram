@@ -1,23 +1,11 @@
-// pages/home/home.js
+// pages/view/view.js
 Page({
-  userInfoClick(res) {
-    console.log(res);
-  },
+
   /**
    * 页面的初始数据
    */
   data: {
-    counter: 0
-  },
-  handleIncrement(event) {
-    // 传过来的数据在event.detail
-    console.log(event);
-    this.setData({
-      counter: this.data.counter+1
-    })
-  },
-  handleTabClick(event) {
-    console.log(event.detail);
+
   },
 
   /**

@@ -1,23 +1,14 @@
-// pages/home/home.js
+// pages/scroll/scroll.js
 Page({
-  userInfoClick(res) {
-    console.log(res);
+  scrollHandle(event) {
+    console.log('正在滚动');
+    console.log(event);
   },
   /**
    * 页面的初始数据
    */
   data: {
-    counter: 0
-  },
-  handleIncrement(event) {
-    // 传过来的数据在event.detail
-    console.log(event);
-    this.setData({
-      counter: this.data.counter+1
-    })
-  },
-  handleTabClick(event) {
-    console.log(event.detail);
+
   },
 
   /**

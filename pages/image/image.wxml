@@ -1,0 +1,13 @@
+<!--pages/image/image.wxml-->
+<!-- image 标签默认有大小320 x 240 -->
+<!-- 本地图片 -->
+<image src="/assets/images/home/recommend_bg.jpg"/>
+<!-- 网络图片 -->
+<image src="https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg"/>
+<text>上面被图片占据了</text>
+<image src="{{imagePath}}"></image>
+<button bindtap="selectImg">点击选择图片</button>
+<!-- 图片懒加载和监听图片加载事件 -->
+<image src="https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg" bindload="imageLoad" lazy-load></image>
+<!-- show-menu-by-longpress 开启长按图片显示识别小程序码菜单 -->
+<image src="/assets/images/home/recommend_bg.jpg" show-menu-by-longpress/>

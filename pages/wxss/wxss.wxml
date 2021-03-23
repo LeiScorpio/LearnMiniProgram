@@ -1,0 +1,44 @@
+<!--pages/wxss/wxss.wxml-->
+<view id="box" class="box" style="color: blue; font-size: 32px;">一夜鱼龙舞</view>
+
+<view class="box1">哈哈</view>
+<view class="box2">哈哈</view>
+
+<!-- 使用weui的输入框 -->
+<view class="weui-search-bar {{inputShowed ? 'weui-search-bar_focusing' : ''}}" id="searchBar">
+  <form class="weui-search-bar__form">
+    <view class="weui-search-bar__box">
+      <i class="weui-icon-search"></i>
+      <input type="text" class="weui-search-bar__input" placeholder="搜索" value="{{inputVal}}" focus="{{inputShowed}}"
+        bindinput="inputTyping" />
+      <span class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput"></span>
+    </view>
+    <label class="weui-search-bar__label" bindtap="showInput">
+      <i class="weui-icon-search"></i>
+      <span class="weui-search-bar__text">搜索</span>
+    </label>
+  </form>
+  <view class="weui-search-bar__cancel-btn" bindtap="hideInput">取消</view>
+</view>
+
+<!-- 显示时间 -->
+<view>{{nowTime}}</view>
+
+<button size="mini" bindtap="switchColor">点击切换文本颜色</button>
+<view class="{{isActive ? 'active': ''}}">哈哈哈</view>
+<!-- hidden为true则隐藏，false显示 -->
+<map name="maMap" hidden="{{true}}"></map>
+
+<!-- wx:for -->
+<view wx:for="{{['a','b','c']}}" wx:key="index">哈哈哈{{item+index}}</view>
+<!-- 可以给item自定义名字,也可以给index自定义名字 -->
+<view wx:for="{{['a','b','c']}}" wx:key="i" wx:for-item="movie" wx:for-index="i">{{movie + i}}</view>
+<!-- block不会进行渲染，仅仅只是用作包裹 -->
+<block>
+  <text>文本</text>
+</block>
+<!-- 导入模板 -->
+<!-- import主要用来导入模板，不能递归调用 -->
+<import src="../../template/template.wxml"></import>
+<template is="contentBox" data="{{btnText: '按钮', content: '哈哈哈哈'}}"></template>
+<template is="contentBox" data="{{btnText: '点击', content: '嘿嘿嘿'}}"></template>

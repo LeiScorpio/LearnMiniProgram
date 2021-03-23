@@ -1,0 +1,6 @@
+/* 分离一部分样式，抽离成一个单独的文件 */
+.box3 {
+  width: 100rpx;
+  height: 100rpx;
+  background-color: pink;
+}

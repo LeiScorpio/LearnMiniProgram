@@ -1,0 +1,13 @@
+<!--pages/scroll/scroll.wxml-->
+<!-- 实现水平滚动 -->
+<scroll-view scroll-x class="scrollx">
+  <view wx:for="{{10}}" wx:key="index" class="content">{{item}}</view>
+</scroll-view>
+<!-- 实现垂直滚动 -->
+<scroll-view scroll-y class="scrolly">
+  <view wx:for="{{10}}" wx:key="index" class="content">{{item}}</view>
+</scroll-view>
+<!-- 绑定滚动事件 -->
+<scroll-view scroll-y class="scrolly" style="margin-top: 10px;" bindscroll="scrollHandle">
+  <view wx:for="{{10}}" wx:key="index" class="content">{{item}}</view>
+</scroll-view>

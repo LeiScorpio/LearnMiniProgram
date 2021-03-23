@@ -1,0 +1,8 @@
+  // 在这里写js代码，注意这里不能写es6语法
+  var message = "hello world"
+  var name = 'ljf'
+// 导出
+  module.exports = {
+    message: message,
+    name: name
+  }

@@ -1,25 +1,19 @@
-// pages/home/home.js
+// pages/wxs/wxs.js
 Page({
-  userInfoClick(res) {
-    console.log(res);
-  },
+
   /**
    * 页面的初始数据
    */
   data: {
-    counter: 0
+    price: 25.666666,
+    time: 1560598160
   },
-  handleIncrement(event) {
-    // 传过来的数据在event.detail
-    console.log(event);
-    this.setData({
-      counter: this.data.counter+1
-    })
+  btnClick() {
+    console.log('点击！');
   },
-  handleTabClick(event) {
-    console.log(event.detail);
+  handleClick(event) {
+console.log(event);
   },
-
   /**
    * 生命周期函数--监听页面加载
    */

@@ -1,3 +1,34 @@
 <!--pages/home/home.wxml-->
-<text class="title">Hello World!</text>
-<button size="mini">按钮</button>
+<text class="title">Hello World! \n</text>
+<!-- text组件 -->
+<!-- 加\n可以实现换行 -->
+<text>hello world \n</text>
+<!-- 默认情况下文本长按不能选中,可以使用selectable转换 -->
+<text user-select>hello ljf \n</text>
+<!-- space 可以调整空格的大小 -->
+<text space="nbsp">hello why \n</text>
+<!-- 半个中文字符大小的空格 -->
+<text space="ensp">hello why \n</text>
+<!-- 一个中文字符大小的空格 -->
+<text space="emsp">hello why \n</text>
+<!-- decode 是否解码文本，显示 > -->
+<text decode>hello &gt; red \n</text>
+ <!--button 的属性  -->
+ <button size="mini" type="primary" plain loading>按钮</button>
+ <!-- button 点击的样式 -->
+ <button>点击</button>
+ <button hover-class="active">点击</button>
+ <button open-type="getUserInfo" bindgetuserinfo="userInfoClick">获取用户信息</button>
+
+ <!-- 使用自定义组件 -->
+ <my-cpn></my-cpn>
+ <my-cpn></my-cpn>
+ <my-cpn></my-cpn>
+
+ <my-prop title="哈哈哈" content="呵呵呵" titlecolor="red"></my-prop>
+
+ <!-- 传递事件 -->
+ <view>{{counter}}</view>
+ <my-event bind:increment="handleIncrement"></my-event>
+ <!-- 组件化练习 -->
+ <w-tab-control titles="{{['衣服','裤子','鞋子','帽子']}}" bind:itemClick="handleTabClick"></w-tab-control>

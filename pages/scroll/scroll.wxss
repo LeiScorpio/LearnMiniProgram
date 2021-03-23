@@ -1,0 +1,16 @@
+/* pages/scroll/scroll.wxss */
+.scrollx{
+  background-color: rgb(83, 83, 192);
+  white-space: nowrap;
+}
+.content {
+  width: 100px;
+  height: 30px;
+  background-color: pink;
+  margin: 10px;
+  display: inline-block;
+}
+.scrolly {
+  height: 200px;
+  background-color: rgb(97, 189, 94);
+}

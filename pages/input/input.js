@@ -1,23 +1,20 @@
-// pages/home/home.js
+// pages/input/input.js
 Page({
-  userInfoClick(res) {
-    console.log(res);
-  },
+
   /**
    * 页面的初始数据
    */
   data: {
-    counter: 0
+
   },
-  handleIncrement(event) {
-    // 传过来的数据在event.detail
+  inputHandle(event) {
     console.log(event);
-    this.setData({
-      counter: this.data.counter+1
-    })
   },
-  handleTabClick(event) {
-    console.log(event.detail);
+  focusHandle() {
+    console.log('focus');
+  },
+  blurHandle() {
+    console.log('blur');
   },
 
   /**

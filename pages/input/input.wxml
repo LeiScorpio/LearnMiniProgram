@@ -1,0 +1,9 @@
+<!--pages/input/input.wxml-->
+<!-- input的基本使用 -->
+<input type="text" value="默认内容"/>
+<!-- type 决定弹出的键盘类型 -->
+<input type="number"/>
+<!-- 输入密码隐藏内容 -->
+<input type="idcard" password focus/>
+<!-- input 绑定事件 -->
+<input type="text" bindinput="inputHandle" bindfocus="focusHandle" bindblur="blurHandle"/>
