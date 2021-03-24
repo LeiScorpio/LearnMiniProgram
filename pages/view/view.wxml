@@ -1,0 +1,10 @@
+<!--pages/view/view.wxml-->
+<!-- 演示view，容器组件 -->
+<!-- 独占一行，类似于div -->
+<view>哈哈哈</view>
+<view>呵呵呵</view>
+<!-- hover-class 当用户按下显示样式 -->
+<!-- hover-stop-propagation 为true时可以阻止触发父元素的hover-class -->
+<view class="box2" hover-class="hover-box2">
+  <view hover-class="hover-box1" hover-stay-time="50" hover-stop-propagation>box1</view>
+</view>

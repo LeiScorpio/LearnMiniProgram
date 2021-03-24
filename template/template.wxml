@@ -1,0 +1,5 @@
+<!-- template 语法 -->
+<template name="contentBox">
+  <button>{{btnText}}</button>
+  <view>{{content}}</view>
+</template>

@@ -1,0 +1,14 @@
+// 价格格式化
+function priceFormat(price, number) {
+  var number = number || 2
+  return price.toFixed(number)
+}
+// 事件格式化
+function dateFormat(timestamp, format) {
+  return '2021-3-23'
+}
+// 导出
+module.exports = {
+  priceFormat: priceFormat,
+  dateFormat: dateFormat
+}

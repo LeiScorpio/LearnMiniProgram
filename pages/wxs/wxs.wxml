@@ -1,0 +1,28 @@
+<!-- 第一种：wxs的定义方式 -->
+<!-- <wxs module="info">
+  // 在这里写js代码，注意这里不能写es6语法
+  var message = "hello world"
+  var name = 'ljf'
+// 导出
+  module.exports = {
+    message: message,
+    name: name
+  }
+</wxs> -->
+<!-- 第二种：导入wxs文件 -->
+<!-- src只能写相对路径，绝对路径无效 -->
+<wxs src="../../wxs/wxs.wxs" module="info"></wxs>
+<view>{{info.message}}</view>
+
+<!-- 演示价格格式化和时间格式化 -->
+<wxs src="../../wxs/format.wxs" module="format"></wxs>
+<view>{{price}}</view>
+<view>{{format.priceFormat(price)}}</view>
+<view>{{format.dateFormat(time, 'yyyy-MM-dd hh:mm:ss')}}</view>
+<!-- 绑定事件 -->
+<!-- 加不加冒号都可以 -->
+<button size="mini" bindtap="btnClick">按钮</button>
+<button size="mini" bind:tap="btnClick">按钮</button>
+<button size="mini" catch:tap="btnClick">按钮</button>
+<!-- 事件对象 -->
+<button id="btn" size="mini" bind:tap="handleClick">按钮</button>
