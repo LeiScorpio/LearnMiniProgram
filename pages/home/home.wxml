@@ -1,3 +1,18 @@
 <!--pages/home/home.wxml-->
 <text class="title">Hello World!</text>
+<view>{{title}}</view>
 <button size="mini">按钮</button>
+<!-- open-type 默认属性是navigator,可以返回，但是不能跳转到tab页面， -->
+<navigator url="/pages/detail/detail">跳转到详情页</navigator>
+<!-- redirect 关闭当前页面，只能跳转到非tabBar的页面，且不能返回 -->
+<navigator url="/pages/detail/detail" open-type="redirect">跳转到详情页</navigator>
+<!-- switchTab只能跳转到tabBar页面 -->
+<navigator url="/pages/about/about" open-type="switchTab">跳转到关于页</navigator>
+<!-- reLaunch 关闭所有页面，跳转到任意一个页面 -->
+<navigator url="/pages/detail/detail" open-type="reLaunch">跳转到详情页</navigator>
+
+<!-- 跳转页面传值 -->
+<navigator url="/pages/detail/detail?name=zs">跳转到详情页</navigator>
+
+<!-- 通过代码来进行跳转 -->
+<button size="mini" bind:tap="pushDetail">跳转到详情页</button>

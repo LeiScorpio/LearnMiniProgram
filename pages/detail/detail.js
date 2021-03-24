@@ -1,8 +1,10 @@
-// pages/home/home.js
+// pages/detail/detail.js
 Page({
-  pushDetail() {
-    wx.navigateTo({
-      url: '/pages/detail/detail?title="你好啊"',
+  backHome() {
+    // 返回页面
+    wx.navigateBack({
+      // 设置返回的层级
+      delta: 1
     })
   },
 
@@ -10,7 +12,6 @@ Page({
    * 页面的初始数据
    */
   data: {
-    title: '哈哈哈'
 
   },
 
@@ -18,6 +19,8 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    // 在这里可以拿到页面跳转传递的数据
+    console.log(options);
 
   },
 
@@ -46,6 +49,13 @@ Page({
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
+    // 获取首页页面对象，getCurrentPages()可以获取当前活跃的页面
+    const pages = getCurrentPages()
+    const home = pages[pages.length - 2]
+    // 返回首页时，修改首页的数据
+    home.setData({
+      title: '呵呵呵'
+    })
 
   },
 
